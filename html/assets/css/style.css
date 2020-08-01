@@ -1,0 +1,344 @@
+#main-dashboard{
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 70px;
+	display: table;
+	
+}
+#question{
+	width: 50%;
+	float: left;
+	margin-right: 1%;
+	border-right: 2px solid grey;
+
+}
+#select-area{
+	width: 100%;
+	margin-bottom:25%;
+	margin-left: 1%;
+	
+}
+.select-sort{
+	margin-top: 1%;
+	float: left;
+	width: 30%;
+	position: relative;
+  	font-family: Arial;
+	margin-right: 1.25%;
+	margin-left: 1.25%;	
+}
+.select-sort select{
+	width: 100%;
+	display: none;
+	text-align: center;
+}
+#select-label{
+	width: 99%;
+	float: left;
+}
+.select-title{
+	width: 30%;
+	float: left;
+	margin-left: 2.5%;
+	text-align: center;
+	font-size: 1.75vw;
+	 white-space: nowrap;
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+ 
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+  height: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+#check-area{
+	width: 100%;
+	margin-bottom: 150px;
+	margin-left: 1%;
+	height: 8em;
+}
+/* The container */
+.containers {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size:1.25vw;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.containers input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ddd;
+}
+
+/* On mouse-over, add a grey background color */
+.containers:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containers input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containers input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containers .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+.check-sort{
+	float: left;
+	width: 47%;
+	margin-right: 1.25%;
+	margin-left: 1.25%;	
+}
+#check-label{
+	width: 99%;
+	float: left;
+	padding: 2%;
+}
+.check-title{
+	width: 30%;
+	float: left;
+	margin-left: 2.5%;
+	text-align: center;
+	font-size: 1.75vw;
+	 white-space: nowrap;
+}
+#submit-region{
+	width: 100%;
+	float:left;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+#no-ans{
+	width: 100%;
+	padding-top: 45%;
+	padding-left: 5%;
+	font-size: 2vw;
+	
+}
+#answer{
+	width: 48%;
+	float: left;
+	margin-right: 1%;
+}
+
+#question, #answer{
+	min-height: 210px;
+    padding-bottom: 20px;
+    display: table-cell;
+    height: auto;
+    overflow: hidden;
+}
+#answer-label{
+	width: 100%;
+	float: left;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	
+}
+.answer-title{
+	width: 100%;
+	float: left;
+	text-align: center;
+	font-size: 3vw;
+	white-space: nowrap;
+}
+#customers {
+	margin-top: 15%;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 95%;
+  margin-left: 2.5%;
+}
+
+.name{
+	width: 25%;
+}
+.mail{
+	width:40%;
+}
+.phno{
+	width: 25%;
+}
+.sub{
+	width: 5%;
+}
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap; 	
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: DodgerBlue;
+  color: white;
+}
+.select-sort-lib{
+	margin-top: 1%;
+	float: left;
+	width: 40%;
+	position: relative;
+  	font-family: Arial;
+	margin-right: 5%;
+	margin-left: 5%;	
+}
+.select-sort-lib select{
+	width: 100%;
+	display: none;
+
+}
+.select-title-lib{
+	width: 40%;
+	float: left;
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: center;
+	font-size: 1.75vw;
+	 white-space: nowrap;
+}
+#no-ans-lib{
+	width: 100%;
+	padding-top: 20%;
+	padding-left: 5%;
+	font-size: 2vw;
+	
+}
+.forgot-pass{	
+	
+	padding-top: 20px;
+	text-align: center;
+	width:100%;
+	padding-left: 35%;
+	padding-right: 35%;
+}
+.forgot-pass form input{
+	display:inline-block;
+	vertical-align:middle
+	
+	}
+	
+.forgot-pass	form input{
+	border:1px solid #3b60c9;
+	padding:15px 20px 16px;
+	color:#3a3b3c
+	
+	}
+.forgot-pass form input:focus{
+	box-shadow:none;outline:0
+	}
+.forgot-pass form .nice-select{
+	padding:0;height:52px;line-height:50px;width:95px;text-align:center!important;float:none;margin-left:-4px
+	} 
+.forgot-pass input{
+	width:100%;display:block;text-align:center;background-color:#ecf1f5;border:1px solid #2f4da1;color:#6a78a1;padding:12px 15px;margin-bottom:15px;-webkit-transition:all .4s ease-out;-moz-transition:all .4s ease-out;-o-transition:all .4s ease-out;transition:all .4s ease-out
+	}
+.forgot-pass input:focus{
+	outline:0
+	}
+.forgot-pass form input{
+	display:block;margin:0 auto 20px
+	}
+.forgot-pass form input{
+	display:inline-block;margin:0
+	}
